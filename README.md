@@ -39,6 +39,7 @@ pip install numpy matplotlib
 
 # 1. 신경망 (Neural Network)
 이 챕터에서는 다층 퍼셉트론(MLP)의 순방향 연산(Forward Propagation)을 넘파이(NumPy) 배열의 행렬 곱셈으로 구현하고, 활성화 함수를 시각화.
+<img width="2396" height="918" alt="3-1" src="https://github.com/user-attachments/assets/feaac190-b4aa-4182-bbb6-07a3ab3a2cc6" />
 
   1) 활성화 함수 (Activation Functions)
 단순한 선형 연산(행렬 곱셈)만 반복하면 신경망을 깊게 쌓는 의미가 없으므로 이를 해결하기 위해 입력 신호의 총합을 출력 신호로 변환하는 비선형 활성화 함수를 구현. ([activation_functions.py 확인하기](./deepLearning/activation_functions.py))
@@ -74,6 +75,7 @@ pip install numpy matplotlib
 
   3) 경사 하강법 시각화 (Gradient Descent)
 학습률(Learning Rate)이라는 하이퍼파라미터가 모델 학습에 미치는 영향을 실험하고, 점이 오차의 최솟값을 찾아 이동하는 궤적을 matplotlib으로 시각화. ([gradient_descent_viz.py 확인하기](./deepLearning/gradient_descent_viz.py))
+<img width="2880" height="1118" alt="4-2" src="https://github.com/user-attachments/assets/311b9cac-405a-4c2e-a7f0-53943d432021" />
 
 * 적절한 학습률: 점이 부드럽게 최솟값(원점)으로 수렴.
 * 너무 큰 학습률: 오차가 줄어들지 않고 오히려 발산하여 화면 밖으로 튕겨 나간다.
@@ -81,6 +83,7 @@ pip install numpy matplotlib
 
   4) 2층 신경망 전체 훈련 루프 (Training Loop)
 앞서 만든 부품들을 조립하여, 미니배치 추출 -> 기울기 산출 -> 매개변수 갱신 -> 오차 기록의 과정을 10,000번 이상 반복하는 훈련 루프를 완성. ([train_neuralnet_basic.py 확인하기](./deepLearning/train_neuralnet_basic.py))
+<img width="2404" height="1122" alt="4-3" src="https://github.com/user-attachments/assets/01055940-4e6c-46df-ad50-249bd726deea" />
 
 * 에폭(Epoch)이 진행될수록 오차(Loss)가 부드럽게 하강하고, 훈련 및 테스트 데이터에 대한 정확도(Accuracy)가 90% 이상으로 동반 상승하는 것을 확인. (오버피팅 방지 검증 포함)
 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -124,6 +127,8 @@ pip install numpy matplotlib
 
   2) 가중치 초깃값 비교 실험 (Weight Initialization)
 은닉층을 5개로 깊게 쌓은 신경망에서, 가중치 초기값에 따른 데이터의 분포 변화를 시각화. Sigmoid에는 Xavier 초깃값을, ReLU에는 He 초깃값을 적용하여 층이 깊어져도 데이터가 고르게 분포하도록 개선. ([weight_init_compare.py 확인하기](./deepLearning/weight_init_compare.py))
+<img width="2880" height="1800" alt="6-2" src="https://github.com/user-attachments/assets/19faed2a-7382-4a86-b608-d9e905bf0d5e" />
+
 
 * 실패 사례 분석: 가중치 표준편차가 1일 때는 데이터가 양극단(0과 1)으로 몰리는 기울기 소실(Gradient Vanishing)이 발생하고, 표준편차가 0.01일 때는 데이터가 중앙에 몰려 다수의 뉴런이 동일한 값을 출력하는 표현력 제한 문제가 발생함을 증명.
 
@@ -152,6 +157,11 @@ pip install numpy matplotlib
 
   3) 필터(가중치) 시각화 검증 (Filter Visualization)
 인공지능이 스스로 특징(Feature)을 찾아내는 과정을 증명하기 위해, 1층의 합성곱 필터 가중치를 이미지로 렌더링. 무작위 노이즈 상태였던 필터가 선형 패턴(Edge)에 반응하도록 물리적으로 갱신되었음을 시각적으로 증명. ([visualize_filter.py 확인하기](./deepLearning/visualize_filter.py))
+<img width="1276" height="1076" alt="vis-1" src="https://github.com/user-attachments/assets/e2945dcb-43ae-4111-842e-b0ee8832d986" />
+
+<img width="1276" height="1080" alt="vis-2" src="https://github.com/user-attachments/assets/86185644-5443-4538-be4d-d0925e0fee9f" />
+
+<img width="1274" height="1078" alt="train_convet_1" src="https://github.com/user-attachments/assets/014f9e26-4b32-4b1d-a62f-ae3bf98944c1" />
 
 * 학습 전: 초기화된 무작위 난수에 의해 필터가 불규칙한 노이즈(Noise) 상태임을 확인.
 * 학습 후: 오차역전파법을 거치며 필터들이 가로선, 세로선, 대각선 등 특정 선형 패턴(Edge)에 반응하도록 물리적으로 갱신되었음을 시각적으로 증명.
