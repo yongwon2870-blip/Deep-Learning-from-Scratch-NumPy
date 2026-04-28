@@ -127,8 +127,7 @@ pip install numpy matplotlib
 
   2) 가중치 초깃값 비교 실험 (Weight Initialization)
 은닉층을 5개로 깊게 쌓은 신경망에서, 가중치 초기값에 따른 데이터의 분포 변화를 시각화. Sigmoid에는 Xavier 초깃값을, ReLU에는 He 초깃값을 적용하여 층이 깊어져도 데이터가 고르게 분포하도록 개선. ([weight_init_compare.py 확인하기](./deepLearning/weight_init_compare.py))
-<img width="2880" height="1800" alt="6-2" src="https://github.com/user-attachments/assets/19faed2a-7382-4a86-b608-d9e905bf0d5e" />
-
+<img width="2877" height="1696" alt="6-2" src="https://github.com/user-attachments/assets/1aa90727-9a64-4052-b848-5ebf040ab4b2" />
 
 * 실패 사례 분석: 가중치 표준편차가 1일 때는 데이터가 양극단(0과 1)으로 몰리는 기울기 소실(Gradient Vanishing)이 발생하고, 표준편차가 0.01일 때는 데이터가 중앙에 몰려 다수의 뉴런이 동일한 값을 출력하는 표현력 제한 문제가 발생함을 증명.
 
