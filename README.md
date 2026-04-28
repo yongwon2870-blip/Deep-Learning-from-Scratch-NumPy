@@ -158,6 +158,7 @@ pip install numpy matplotlib
 인공지능이 스스로 특징(Feature)을 찾아내는 과정을 증명하기 위해, 1층의 합성곱 필터 가중치를 이미지로 렌더링. 무작위 노이즈 상태였던 필터가 선형 패턴(Edge)에 반응하도록 물리적으로 갱신되었음을 시각적으로 증명. ([visualize_filter.py 확인하기](./deepLearning/visualize_filter.py))
 <img width="1276" height="1076" alt="vis-1" src="https://github.com/user-attachments/assets/e2945dcb-43ae-4111-842e-b0ee8832d986" />
 
+
 <img width="1276" height="1080" alt="vis-2" src="https://github.com/user-attachments/assets/86185644-5443-4538-be4d-d0925e0fee9f" />
 
 <img width="1274" height="1078" alt="train_convet_1" src="https://github.com/user-attachments/assets/014f9e26-4b32-4b1d-a62f-ae3bf98944c1" />
