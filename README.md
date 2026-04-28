@@ -105,7 +105,7 @@ train_neuralnet_basic.py
 # 3. 오차역전파법 (Backpropagation)
 
 backprop_test.py
-layers.py **
+layers.py 
 gradient_check.py
 
 이 챕터에서는 신경망의 학습 속도를 획기적으로 높이기 위해, 미분을 수치적으로 계산하는 대신 해석적(수학적)으로 계산하여 연쇄 법칙(Chain Rule)으로 전달하는 오차역전파법을 구현.
