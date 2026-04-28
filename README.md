@@ -155,7 +155,7 @@ pip install numpy matplotlib
 * 구조적 차이점 분석: 기존 완전연결 계층이 가진 '공간 정보 파괴', '역할의 혼재', '과도한 가중치 파라미터' 문제를 CNN이 어떻게 형태 유지, 특징 추출과 분류의 분업화, 가중치 공유(Parameter Sharing)**로 해결하는지 코드 수준에서 확인.
 
   3) 필터(가중치) 시각화 검증 (Filter Visualization)
-인공지능이 스스로 특징(Feature)을 찾아내는 과정을 증명하기 위해, 1층의 합성곱 필터 가중치를 이미지로 렌더링. 무작위 노이즈 상태였던 필터가 선형 패턴(Edge)에 반응하도록 물리적으로 갱신되었음을 시각적으로 증명. ([visualize_filter.py 확인하기](./deepLearning/visualize_filter.py))
+     인공지능이 스스로 특징(Feature)을 찾아내는 과정을 증명하기 위해, 1층의 합성곱 필터 가중치를 이미지로 렌더링. 무작위 노이즈 상태였던 필터가 선형 패턴(Edge)에 반응하도록 물리적으 로 갱신되었음을 시각적으로 증명. ([visualize_filter.py 확인하기](./deepLearning/visualize_filter.py))
 <img width="1276" height="1076" alt="vis-1" src="https://github.com/user-attachments/assets/e2945dcb-43ae-4111-842e-b0ee8832d986" />
 
 <img width="1276" height="1080" alt="vis-2" src="https://github.com/user-attachments/assets/86185644-5443-4538-be4d-d0925e0fee9f" />
@@ -164,7 +164,7 @@ pip install numpy matplotlib
 * 학습 후: 오차역전파법을 거치며 필터들이 가로선, 세로선, 대각선 등 특정 선형 패턴(Edge)에 반응하도록 물리적으로 갱신되었음을 시각적으로 증명.
 
   4) CNN 모델 학습 및 성능 평가 (Model Training & Evaluation)
-조립된 `SimpleConvNet`을 실제 데이터셋(MNIST)으로 학습시키는 전체 훈련 루프를 구현. ([train_convet.py 확인하기](./deepLearning/train_convet.py))
+     조립된 `SimpleConvNet`을 실제 데이터셋(MNIST)으로 학습시키는 전체 훈련 루프를 구현. ([train_convet.py 확인하기](./deepLearning/train_convet.py))
 
 <img width="1274" height="1078" alt="train_convet_1" src="https://github.com/user-attachments/assets/014f9e26-4b32-4b1d-a62f-ae3bf98944c1" />
 
